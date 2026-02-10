@@ -1,0 +1,39 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Help Center tiles vertical centering and hover tooltip for full titles",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Visually vertically center the logo/text block within each Help Center topic tile by reducing excess top space to match the bottom space (layout/styling only in HelpCenter tiles).",
+      "acceptanceCriteria": [
+        "In the Help Center grid, each tile’s visible padding/space above the logo/text matches the visible space below it (content appears vertically centered).",
+        "Only layout/styling changes are made; no changes to backend calls, React Query hooks, component state, or click behavior.",
+        "Tile still opens the topic detail modal on click exactly as before."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HelpCenter.tsx",
+          "operation": "modify",
+          "description": "Adjust only the tile markup/classes in the topics grid so the tile's content sits visually centered vertically (e.g., reduce the CardContent top padding and/or use flex alignment on CardContent), without changing any props/state/data fetching or onClick behavior."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add a lightweight text-only hover tooltip for each Help Center topic tile showing the full topic.topicName without affecting tile layout or click behavior.",
+      "acceptanceCriteria": [
+        "Hovering a Help Center tile reveals the full topic title (including titles that are truncated in the tile).",
+        "Tooltip is text-only and does not block or prevent clicking the tile to open the modal.",
+        "No changes are made outside of what is necessary to implement the hover title behavior on Help Center tiles."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HelpCenter.tsx",
+          "operation": "modify",
+          "description": "Add a non-intrusive hover tooltip for each tile that displays the full topic.topicName (prefer a native, text-only tooltip via a title attribute on the clickable tile container or the truncated title element) ensuring it does not intercept pointer events or change layout, and preserving existing click-to-open-modal behavior."
+        }
+      ]
+    }
+  ]
+}

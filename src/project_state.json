@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Help Center tile UI refinements: adjust tile height/padding to visually center logo/text and add hover tooltip showing full topic titles (frontend-only, no schema/backend/data/logic changes).",
+  "architectural_notes": [
+    "UI changes must be frontend-only (CSS/layout); do not modify schema, backend, data, state/props, or application logic."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-adjust-the-help-center-topic-tiles-so-the-logo-text-block-is-visually-vertically-centered-by-reducing-the-excess-vertical-space-above-the-logo-text-to-match-the-space-below-it-frontend-only-css-layout-change-apply-the-change-only-to-the-help-center-tiles-in-frontend-src-pages-helpcenter-tsx-and-do-not-alter-any-data-fetching-state-props-or-behavior",
+      "title": "Adjust the Help Center topic tiles so the logo/text block is visually vertically centered by reducing the excess vertical space above the logo/text to match the space below it (frontend-only CSS/layout change). Apply the change only to the Help Center tiles in `frontend/src/pages/HelpCenter.tsx` and do not alter any data fetching, state, props, or behavior.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-lightweight-text-only-hover-tooltip-on-each-help-center-tile-that-displays-the-full-topic-topicname-when-hovering-over-a-tile-or-the-truncated-title-the-tooltip-must-not-interfere-with-the-tile-s-existing-click-behavior-or-layout",
+      "title": "Add a lightweight, text-only hover tooltip on each Help Center tile that displays the full `topic.topicName` when hovering over a tile (or the truncated title). The tooltip must not interfere with the tile’s existing click behavior or layout.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Adjust Help Center tile height/padding so space above logo/text matches space below, visually centering content (frontend-only CSS/layout; no schema/backend/data/logic changes).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add lightweight text-only hover tooltip on Help Center tiles to display the full topic title without affecting existing tile behavior (frontend-only).",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Help Center tile vertical centering + hover tooltip for full topic title",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

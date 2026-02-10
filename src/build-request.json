@@ -1,0 +1,59 @@
+{
+  "kind": "build_request",
+  "title": "Help Center tile vertical centering + hover tooltip for full topic title",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Adjust the Help Center topic tiles so the logo/text block is visually vertically centered by reducing the excess vertical space above the logo/text to match the space below it (frontend-only CSS/layout change). Apply the change only to the Help Center tiles in `frontend/src/pages/HelpCenter.tsx` and do not alter any data fetching, state, props, or behavior.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Reduce the visual height of each Help Center tile so that the space above the logo/text matches the space below it, resulting in the content sitting visually centered. Do not change any schema, data, backend, state, props, logic, or functionality. This is a frontend-only CSS/layout adjustment."
+        ]
+      },
+      "acceptanceCriteria": [
+        "In the Help Center grid, each tile’s visible padding/space above the logo/text matches the visible space below it (content appears vertically centered).",
+        "Only layout/styling changes are made; no changes to backend calls, React Query hooks, component state, or click behavior.",
+        "Tile still opens the topic detail modal on click exactly as before."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add a lightweight, text-only hover tooltip on each Help Center tile that displays the full `topic.topicName` when hovering over a tile (or the truncated title). The tooltip must not interfere with the tile’s existing click behavior or layout.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Also add a simple hover tooltip that shows the full topic title when hovering over a tile. The tooltip should be lightweight, text-only, and not interfere with existing tile behavior. Do not modify any other part of the UI or code besides what is necessary for these two visual updates."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hovering a Help Center tile reveals the full topic title (including titles that are truncated in the tile).",
+        "Tooltip is text-only and does not block or prevent clicking the tile to open the modal.",
+        "No changes are made outside of what is necessary to implement the hover title behavior on Help Center tiles."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend-only changes for this request.",
+    "Do not change any backend Motoko code, schemas, stable variables, or backend interfaces.",
+    "Do not change any data models, React Query endpoints, application logic, or behavior beyond the specified visual/UX adjustments.",
+    "Do not edit files in `frontend/src/components/ui` (read-only); compose existing components or use simple markup/CSS as needed.",
+    "Use English for any user-facing text."
+  ],
+  "nonGoals": [
+    "Adding new Help Center features beyond tile height/padding adjustment and hover title display.",
+    "Changing topic filtering/search behavior.",
+    "Redesigning the Help Center page layout beyond what is necessary to achieve the requested centering and tooltip behavior."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

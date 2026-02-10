@@ -1,0 +1,45 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-adjust-the-help-center-topic-tiles-so-the-logo-text-block-is-visually-vertically-centered-by-reducing-the-excess-vertical-space-above-the-logo-text-to-match-the-space-below-it-frontend-only-css-layout-change-apply-the-change-only-to-the-help-center-tiles-in-frontend-src-pages-helpcenter-tsx-and-do-not-alter-any-data-fetching-state-props-or-behavior",
+      "featureTitle": "Adjust the Help Center topic tiles so the logo/text block is visually vertically centered by reducing the excess vertical space above the logo/text to match the space below it (frontend-only CSS/layout change). Apply the change only to the Help Center tiles in `frontend/src/pages/HelpCenter.tsx` and do not alter any data fetching, state, props, or behavior.",
+      "files": [
+        "frontend/src/pages/HelpCenter.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-lightweight-text-only-hover-tooltip-on-each-help-center-tile-that-displays-the-full-topic-topicname-when-hovering-over-a-tile-or-the-truncated-title-the-tooltip-must-not-interfere-with-the-tile-s-existing-click-behavior-or-layout",
+      "featureTitle": "Add a lightweight, text-only hover tooltip on each Help Center tile that displays the full `topic.topicName` when hovering over a tile (or the truncated title). The tooltip must not interfere with the tile’s existing click behavior or layout.",
+      "files": [
+        "frontend/src/pages/HelpCenter.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

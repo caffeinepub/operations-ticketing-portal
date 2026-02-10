@@ -1,0 +1,36 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-10T18:58:39.395Z",
+  "summary": "The diff appears to implement the requested Help Center tile centering and hover tooltip, but it also introduces additional (unrequested) scroll-cue behavior/UX in HelpCenter and includes edits to non-required metadata/docs files. No clear missing requirements can be confirmed from the truncated diff.",
+  "missing_requirements": [],
+  "hallucinated_features": [
+    {
+      "description": "Added Help Center nested scroll cue behavior/UX (scroll container ref + scroll cue hook) beyond the requested tile centering and hover title tooltip.",
+      "reason": "BuildRequest explicitly limits changes to the specified tile centering and hover tooltip behavior and asks not to change application logic/behavior beyond those visual adjustments. The diff shows new hook usage and related state for scroll cues.",
+      "evidence": [
+        "frontend/src/pages/HelpCenter.tsx (imports useRef/useScrollCues; scrollContainerRef and canScrollUp/canScrollDown/hasScrolled usage shown)"
+      ]
+    },
+    {
+      "description": "Modified project metadata/state tracking file (project_state.json).",
+      "reason": "Not requested by the BuildRequest, which constrained the change to frontend Help Center tile styling/tooltip behavior.",
+      "evidence": [
+        "project_state.json"
+      ]
+    },
+    {
+      "description": "Modified frontend-file-summaries.txt (documentation/summary content).",
+      "reason": "Not requested; changes are outside the minimum necessary implementation in HelpCenter tiles.",
+      "evidence": [
+        "frontend-file-summaries.txt"
+      ]
+    }
+  ],
+  "confidence": 0.62,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/pages/HelpCenter.tsx",
+    "project_state.json"
+  ]
+}
